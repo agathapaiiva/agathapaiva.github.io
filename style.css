@@ -1,0 +1,15 @@
+.details{
+    height: 1rem; background-color: #ffcd74cf; margin: 0px;
+}
+
+.post{
+    margin: 3px;
+}
+
+.img-post{
+    max-width: 100%; height: auto; display:block;
+}
+
+.footer-dev{
+    margin: 0;
+}
