@@ -48,13 +48,13 @@
     <div class="col-12">
       <h4>Fundamentos da linguagem</h4>
       <article>
-        <p>
+        <p class="text-justify">
           Na base de qualquer linguagem de programação estão seus tipos de dados e operadores, e JAVA não é uma
           exceção. Esses elementos definem os limites de uma linguagem e determina o tipo de tarefas às quais
           ela pode ser aplicada dentro de um sistema/aplicação. Os tipos de dados são especialmente
           importantes em JAVA porque a mesma é considerada uma linguagem fortemente tipada.
         </p>
-        <p>
+        <p class="text-justify">
           A variável pode ser definida como um recurso das linguagens de programação utilizado para armazenar valores em
           memória.
           Dessa forma sempre que precisarmos obter esse valor, basta referenciarmos.
@@ -120,7 +120,7 @@
       </div>
 
       <article>
-        <p class="font-weight-bold">TIPOS INTEIROS</p>
+        <h6 class="font-weight-bold">TIPOS INTEIROS</h6>
         <p>No Java é definido quatro tipos inteiros: conforme apresentado na tabela a seguir: </p>
         <div class="table-responsive">
           <table class="table table-striped text-center">
@@ -155,13 +155,13 @@
             </tbody>
           </table>
         </div>
-        <p>O tipo inteiro mais usado é int. Variáveis de tipo int costumam ser empregadas no controle de laços, na
+        <p class="text-justify">O tipo inteiro mais usado é int. Variáveis de tipo int costumam ser empregadas no controle de laços, na
           indexação de
           arrays e na execução de cálculos inteiros para fins gerais.</p>
       </article>
       <article>
-        <p class="font-weight-bold">TIPOS DE PONTO FLUTUANTE</p>
-        <p>Os tipos de ponto flutuante podem representar números que têm componentes fracionários. Há dois tipos de
+        <h6 class="font-weight-bold">TIPOS DE PONTO FLUTUANTE</h6>
+        <p class="text-justify">Os tipos de ponto flutuante podem representar números que têm componentes fracionários. Há dois tipos de
           ponto
           flutuante, float e double, que representam números de precisão simples e dupla, respectivamente. </p>
         <div class="table-responsive">
@@ -187,12 +187,12 @@
             </tbody>
           </table>
         </div>
-        <p>De ambos, o double é mais usado, porque todas as funções matemáticas da biblioteca de classe Java usam
+        <p class="text-justify">De ambos, o double é mais usado, porque todas as funções matemáticas da biblioteca de classe Java usam
           valores do tipo double.</p>
       </article>
       <article>
         <div class="p-3 mb-2 bg-dark text-white rounded">
-          <p>
+          <p class="text-justify">
             Podemos conferir alguns exemplos de operações matemáticas/operadores aritméticos utilizando os tipos de variáveis do Java.
           </p>
           <pre class="text-white" style="margin: 0px;">
@@ -249,6 +249,67 @@
             </code>
           </pre>
         </div>
+      </article>
+      <article class="text-justify">
+        <p>Após entendermos sobre os tipo primitivos e como os operadores ariméticos são aplicado no Java, a leitura a seguir
+          irá abordar sobre escopo de variável.
+        </p>
+        <p>
+          O escopo de variável pode ser definido como um ambiente onde uma determinada variável pode ser acessada. No Java, o
+          escopo de variáveis vai de acordo com o bloco onde a mesma foi declara. Vale ressaltar que quando falamos de bloco estamos falando uma espaço delimitado com inicio e fim, conforme
+          apresentado na imagem a seguir:
+        </p>
+          <div class="col-md-auto">
+            <img class="img-responsive img-post" src="/images/escopo-java.png" alt="Imagem de exemplo genérica">
+          </div>
+          <br/>
+        <p>
+          Dito isso, imagine uma variavel criada dentro de um bloco, a mesma se torna inacessível ao interpretador sair do bloco de
+          execução, ao qual ela pertence. Com isso esta variável não pode ser lida ou manipulada por rotinas e códigos que estão
+          fora do seu bloco de declaração, ou seja, fora do escopo da variável.
+        </p>
+        <p>
+          Em uma Classe, podemos visualizar a diferença de escopos. Os atributos (variáveis) são declarados no corpo principal
+          da Classe, sendo portanto, acessíveis por todos os métodos.
+        
+          Caso você declare uma variável dentro do método, o escopo dessa variável está limitado apenas ao corpo desse método,
+          ou seja, dentro das chaves que limitam o método.
+        </p>
+        <div class="col-md-auto">
+          <img class="img-responsive img-post" src="/images/escopo-java-02.png" alt="Imagem de exemplo genérica">
+        </div>
+        <br/>
+      </article>
+      <article>
+        <h6 class="font-weight-bold">ENTRADA DE DADOS</h6>
+        <p>
+          Considerando-se que você precisa que o usuário responda um questionário que irá apresentar na tela. Nos deparamos
+          com
+          a seguinte pergunta: Como ler o valor que o usuário digitou em seu teclado? A resposta está na utilização da Classe
+          Scanner do Java.
+      
+          Na linguagem Java, a partir do Java 1.5 ou Java 5.0, o pacote de classes java.util disponibilizou a classe Scanner,
+          que implementa operações de entrada de dados pelo teclado.
+        </p>
+        <p>A classe Scanner possui vários métodos que possibilitam a entrada de dados de diferentes tipos, entre eles
+          destacam-se: </p>
+        <ul>
+          <li>String next() - retorna uma cadeia de caracteres simples, ou seja, que não usa o caractere espaço em branco;
+          </li>
+          <li>double nextDouble() - retorna um número em notação de ponto flutuante normalizada em precisão dupla de 64 bits
+            (usado para receber valores reais ou monetários);</li>
+          <li>boolean hasNextDouble() - retorna true se o próximo dado de entrada pode ser interpretado como um valor double;
+          </li>
+          <li>int nextInt() - retorna um número inteiro de 32 bits;</li>
+          <li>boolean hasNextInt() - retorna true se o próximo dado de entrada pode ser interpretado como um valor int; </li>
+          <li>String nextLine() - retorna uma cadeia de caracteres, por exemplo: “BlogJava”; </li>
+          <li>long nextLong() - retorna um número inteiro de 64 bits. </li>
+        </ul>
+        <p>A seguir podemos vê na prática como podemos utilizar do recurso da Classe Scanner: </p>
+        <div class="col-md-auto">
+          <img class="img-responsive img-post" src="/images/entrada-dados.png" alt="Imagem de exemplo genérica">
+        </div>
+        <br/>
       </article>
     </div>
   </div>
